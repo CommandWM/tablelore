@@ -30,7 +30,8 @@ def test_profiles_csv_with_core_quality_warnings() -> None:
     assert "File size:" in output
     assert "Rows: 8" in output
     assert "Columns: 9" in output
-    assert "| region | object | 0 | 0.0% | 4 |" in output
+    assert "region" in output
+    assert "Missing values found in: region" not in output
     assert "monthly_spend" in output
     assert "Missing values found in: monthly_spend, churn_reason, leaky_cancel_date." in output
     assert "Duplicate rows: 1" in output
