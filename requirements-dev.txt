@@ -1,2 +1,4 @@
 -r requirements.txt
+matplotlib>=3.8
+pyarrow>=15.0
 pytest>=8.0

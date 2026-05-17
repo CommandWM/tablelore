@@ -1,5 +1,7 @@
 interface:
   display_name: "TableLore"
   short_description: "Disciplined local data analysis workflows"
+  icon_small: "./assets/tablelore-logo.png"
+  icon_large: "./assets/tablelore-logo.png"
   brand_color: "#2D9CDB"
   default_prompt: "Use $tablelore to profile this dataset before modeling and report findings with caveats."

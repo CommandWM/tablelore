@@ -29,4 +29,6 @@ def test_openai_metadata_names_tablelore_skill() -> None:
 
     assert 'display_name: "TableLore"' in metadata
     assert "short_description:" in metadata
+    assert 'icon_small: "./assets/tablelore-logo.png"' in metadata
+    assert (SKILL_DIR / "assets" / "tablelore-logo.png").exists()
     assert 'default_prompt: "Use $tablelore' in metadata
