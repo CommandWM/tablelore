@@ -1,0 +1,5 @@
+interface:
+  display_name: "TableLore"
+  short_description: "Disciplined local data analysis workflows"
+  brand_color: "#2D9CDB"
+  default_prompt: "Use $tablelore to profile this dataset before modeling and report findings with caveats."

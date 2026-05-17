@@ -1,0 +1,9 @@
+customer_id,signup_date,last_seen_date,plan,region,monthly_spend,churned,churn_reason,leaky_cancel_date
+C001,2025-01-02,2025-05-01,starter,NA,19.99,0,,
+C002,2025-01-05,2025-03-03,pro,EU,49.99,1,price,2025-03-04
+C003,2025-01-07,2025-04-12,pro,NA,49.99,0,,
+C004,2025-01-08,2025-02-15,enterprise,APAC,199.00,1,missing_feature,2025-02-16
+C005,2025-01-10,2025-05-10,starter,NA,,0,,
+C006,2025-01-12,2025-01-20,starter,EU,-5.00,1,price,2025-01-21
+C006,2025-01-12,2025-01-20,starter,EU,-5.00,1,price,2025-01-21
+C007,2025-02-01,2025-05-09,pro,LATAM,49.99,0,,
