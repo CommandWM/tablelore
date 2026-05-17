@@ -24,12 +24,17 @@ LEAKAGE_NAME_HINTS = (
     "target",
     "label",
     "outcome",
+    "status",
+    "resolution",
     "cancel",
     "churn",
     "closed",
+    "refund",
     "resolved",
     "future",
+    "note",
 )
+FREE_TEXT_NAME_HINTS = ("note", "comment", "description", "message", "text")
 
 
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
@@ -150,6 +155,8 @@ def category_rows(df: pd.DataFrame) -> list[list[object]]:
     for column in df.select_dtypes(exclude="number").columns:
         lowered = column.lower()
         if "id" in lowered or any(hint in lowered for hint in DATE_NAME_HINTS):
+            continue
+        if any(hint in lowered for hint in FREE_TEXT_NAME_HINTS):
             continue
         distinct = int(df[column].nunique(dropna=True))
         if distinct == 0 or distinct > 20:

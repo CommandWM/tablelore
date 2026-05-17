@@ -102,3 +102,19 @@ def test_markdown_table_cells_are_escaped(tmp_path: Path) -> None:
     assert result.returncode == 0, result.stderr
     assert "customer\\|id" in result.stdout
     assert "core segment" in result.stdout
+
+
+def test_free_text_values_are_not_rendered_as_category_top_values(tmp_path: Path) -> None:
+    csv_path = tmp_path / "notes.csv"
+    csv_path.write_text(
+        "ticket_id,resolution_status,post_churn_note,churned_30d\n"
+        "T1,resolved,,0\n"
+        "T2,refund_processed,refund after churn,1\n",
+        encoding="utf-8",
+    )
+
+    result = run_profile(str(csv_path), "--target", "churned_30d")
+
+    assert result.returncode == 0, result.stderr
+    assert "refund after churn" not in result.stdout
+    assert "Potential leakage candidates: resolution_status, post_churn_note." in result.stdout

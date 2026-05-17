@@ -1,0 +1,7 @@
+ticket_id,account_id,opened_at,plan,severity,first_response_hours,csat_score,churned_30d,resolution_status,post_churn_note
+T-100,A-001,2026-01-03,starter,low,8.5,5.0,0,resolved,
+T-101,A-002,2026-01-07,pro,high,31.0,2.0,1,canceled_after_ticket,downgraded after closure
+T-102,A-003,2026-01-08,enterprise,critical,48.0,1.0,1,refund_processed,refund after churn
+T-103,A-004,2026-02-02,starter,medium,,4.0,0,resolved,
+T-104,A-005,2026-02-12,pro,critical,-1.0,,1,canceled_after_ticket,account closed
+T-104,A-005,2026-02-12,pro,critical,-1.0,,1,canceled_after_ticket,account closed
