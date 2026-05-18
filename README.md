@@ -2,8 +2,6 @@
   <img src="tablelore/assets/tablelore-logo.png" alt="TableLore logo" width="220">
 </p>
 
-<h1 align="center">TableLore</h1>
-
 <p align="center">
   <strong>Practical data analysis hygiene for AI agents.</strong>
 </p>
