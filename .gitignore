@@ -6,3 +6,6 @@ analysis/
 reports/
 outputs/
 demo/customer-churn/output/
+demo/modeling-readiness/output/
+demo/multifile-join/output/
+demo/notebook-rescue/output/

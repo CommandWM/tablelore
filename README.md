@@ -43,16 +43,19 @@ The core behavior is:
 
 ## Try the Demo Flow
 
-The fastest user path is the customer-churn demo:
+The fastest user path is the demo suite:
 
 ```bash
 python3 -m pip install -r requirements-dev.txt
 python3 demo/customer-churn/run_demo.py
+python3 demo/multifile-join/run_demo.py
+python3 demo/notebook-rescue/run_demo.py
+python3 demo/modeling-readiness/run_demo.py
 ```
 
-Then paste `demo/customer-churn/output/analysis_prompt.md` into a Codex session with TableLore available. The demo shows the intended pattern: profile first, identify data risks and leakage, then decide whether deeper analysis or modeling is safe.
+Then paste the generated prompts into a Codex session with TableLore available. The demos show the intended pattern: profile first, audit joins, rescue notebooks into reproducible artifacts, identify leakage, and only then decide whether deeper analysis or modeling is safe.
 
-See [docs/demo-flow.md](docs/demo-flow.md) for the full walkthrough.
+See [demo/README.md](demo/README.md) for the full demo suite and [docs/demo-flow.md](docs/demo-flow.md) for the guided walkthrough.
 
 ## Optional Profiling Helper
 
@@ -99,6 +102,18 @@ tablelore/
 ├── references/
 └── scripts/table_profile.py
 demo/customer-churn/
+├── README.md
+└── run_demo.py
+demo/multifile-join/
+├── data/
+├── README.md
+└── run_demo.py
+demo/notebook-rescue/
+├── data/
+├── messy_revenue_exploration.ipynb
+├── README.md
+└── run_demo.py
+demo/modeling-readiness/
 ├── README.md
 └── run_demo.py
 dogfood/com47/

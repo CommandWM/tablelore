@@ -1,0 +1,10 @@
+month,customer_id,segment,revenue
+2025-01,C001,enterprise,1200
+2025-01,C002,midmarket,250
+2025-01,C003,smb,100
+2025-02,C001,enterprise,1450
+2025-02,C002,midmarket,300
+2025-02,C003,smb,90
+2025-03,C001,enterprise,1700
+2025-03,C002,midmarket,280
+2025-03,C004,enterprise,900

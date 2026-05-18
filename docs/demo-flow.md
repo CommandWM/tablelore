@@ -28,23 +28,35 @@ Build the best model from this data.
 
 That skips the inspection step where most avoidable mistakes happen.
 
-## Runnable Customer-Churn Demo
+## Runnable Demo Suite
 
 From the repository root:
 
 ```bash
 python3 -m pip install -r requirements-dev.txt
 python3 demo/customer-churn/run_demo.py
+python3 demo/multifile-join/run_demo.py
+python3 demo/notebook-rescue/run_demo.py
+python3 demo/modeling-readiness/run_demo.py
 ```
 
-Generated files:
+The demo suite is indexed in `demo/README.md`. Each demo writes generated files under its own ignored `output/` folder.
+
+## Demo Map
+
+- `demo/customer-churn/`: profile a single messy table and generate analysis/leakage prompts.
+- `demo/multifile-join/`: audit customers, orders, and refunds before summarizing revenue.
+- `demo/notebook-rescue/`: turn a messy notebook into a reproducible script and manifest.
+- `demo/modeling-readiness/`: block unsafe baseline training until leakage and split strategy are explicit.
+
+## Customer-Churn Generated Files
 
 - `demo/customer-churn/output/profile.md`: lightweight table profile.
 - `demo/customer-churn/output/analysis_prompt.md`: copy/paste prompt for a first-pass readiness review.
 - `demo/customer-churn/output/leakage_prompt.md`: copy/paste prompt for pre-model leakage review.
 - `demo/customer-churn/output/demo_summary.md`: short explanation of the demo artifacts.
 
-## What The Demo Teaches
+## What The Customer-Churn Demo Teaches
 
 The fixture at `tests/fixtures/customer_churn_sample.csv` intentionally includes common analysis traps:
 
@@ -80,6 +92,14 @@ cat demo/customer-churn/output/leakage_prompt.md
 ```
 
 The answer should produce a conservative modeling-readiness review: columns to exclude or confirm, timing questions for the data owner, and a split strategy.
+
+## Expanded Demo Lessons
+
+The additional demos make the open-source roadmap more concrete:
+
+- Multi-file join points toward richer inventory helpers, DuckDB-first examples, and join audit templates.
+- Notebook rescue points toward reproducible artifact manifests and conversion patterns from exploration to durable work.
+- Modeling readiness points toward baseline-planning templates that refuse unsafe modeling until leakage and split strategy are resolved.
 
 ## Practical User Pattern
 

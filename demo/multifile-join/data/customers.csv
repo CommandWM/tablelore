@@ -1,0 +1,6 @@
+customer_id,account_name,segment,signup_date
+C001,Northwind Analytics,enterprise,2025-01-04
+C002,Blue Mesa Labs,midmarket,2025-01-12
+C003,Riverfront Retail,smb,2025-01-20
+C003,Riverfront Retail Duplicate,smb,2025-01-20
+C004,Atlas Health,enterprise,2025-02-02
