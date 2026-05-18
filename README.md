@@ -43,6 +43,19 @@ The core behavior is:
 4. Keep exploratory and production artifacts separate.
 5. Report findings with caveats, data quality risks, and reproducibility steps.
 
+## Try the Demo Flow
+
+The fastest user path is the customer-churn demo:
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 demo/customer-churn/run_demo.py
+```
+
+Then paste `demo/customer-churn/output/analysis_prompt.md` into a Codex session with TableLore available. The demo shows the intended pattern: profile first, identify data risks and leakage, then decide whether deeper analysis or modeling is safe.
+
+See [docs/demo-flow.md](docs/demo-flow.md) for the full walkthrough.
+
 ## Optional Profiling Helper
 
 The helper is not a packaged CLI. Run it directly:
@@ -87,6 +100,9 @@ tablelore/
 ├── assets/tablelore-logo.png
 ├── references/
 └── scripts/table_profile.py
+demo/customer-churn/
+├── README.md
+└── run_demo.py
 dogfood/com47/
 ├── COM47_DOGFOOD_REPORT.md
 ├── data/

@@ -5,3 +5,4 @@ __pycache__/
 analysis/
 reports/
 outputs/
+demo/customer-churn/output/
